@@ -1,0 +1,20 @@
+﻿<Window x:Class="Xcreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xcreen"
+        mc:Ignorable="d"
+        Title="Xcreen" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="Black" ShowInTaskbar="False">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Stretch="Fill" />
+        <Canvas x:Name="canvas" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" Background="Transparent">
+            <Rectangle x:Name="rect" Fill="White" Stroke="#FF171717" Opacity="0.35"></Rectangle>
+            <ToolBar x:Name="toolbar" Height="30" Canvas.Left="301" Canvas.Top="361" Width="162" Visibility="Hidden">
+                <Button x:Name="copyImage" Content="Copy" Click="copyImage_Click"/>
+                <Button x:Name="uploadImage" Content="Upload"/>
+                <Button x:Name="saveAs" Content="Save As" Click="saveAs_Click"/>
+            </ToolBar>
+        </Canvas>
+    </Grid>
+</Window>
